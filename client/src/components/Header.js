@@ -3,8 +3,8 @@ import bgImage from "../images/pinkTealGeo.jpg";
 
 const headerStyle = {
     "backgroundImage": `url(${bgImage})`,
-    "maxWidth": "100",
-    height: "calc(100vw * .17)",
+    "maxWidth": "100%",
+    height: "calc(100 * .17)",
     "backgroundSize": "cover",
     position: "relative"
 }
