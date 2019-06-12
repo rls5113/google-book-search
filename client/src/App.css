@@ -1,24 +1,34 @@
-.App {
-  text-align: center;
-}
+nav {
+  color: #f9c411;
+  background-color: #0794d1;
+  padding: 1rem 0;
+  }
+  
+  nav h2 {
+    display: inline;
+    margin: 0 2vw;
+    font-size: 1.25rem;
+    color: white;
+  }
+  
+  nav a {
+    margin: 0 2vw;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  nav a:hover {
+    height: 100%;
+    font-weight: bold;
+  }
+  nav a:visited {
+    color: #f9c411;
+  }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  header h1 {
+    font-size: 6vw;
+    text-align: center;
+    color: white;
+    padding: 5% 0 3%;
+    text-shadow: 4px 4px 5px black;
+  }
