@@ -2,6 +2,7 @@ import axios from "axios";
 
 export default {
     searchBooks: (title) => {
-        return axios.post("/search", {title: title});
+        console.log("API: title: "+title);
+        return axios.post("/search",{title: title});
     }
 }

@@ -2,20 +2,27 @@ require("dotenv").config();
 const axios = require("axios");
 const db = require("../models");
 const path = require("path");
+// const router = require("express").Router();
 
 module.exports = function(app) {
 
     app.post("/search", (req, res) => {
+        console.log("in api-routes");
         //replace spaces with (+) in the title
+         console.log(req.body);
+        // console.log(req.body.title);
         let bookTitle = req.body.title.replace(/\s/g,"+");
+        console.log(bookTitle);
         axios.get(
             `https://www.googleapis.com/books/v1/volumes?q=${bookTitle}&key=${process.env.GBOOKS_KEY}`
         ).then(
             (response) => {
+                console.log(response.data.items);
                 res.json(response.data.items);
             }
-        ).catch(
-            (err) => {
+        )
+        .catch(
+            (error) => {
                 res.json({error: error});
             }
         )

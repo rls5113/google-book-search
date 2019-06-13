@@ -32,3 +32,49 @@ nav {
     padding: 5% 0 3%;
     text-shadow: 4px 4px 5px black;
   }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  #searchContainer, #resultsContainer {
+    color: white;
+    background-color: rgb(156, 124, 124);
+    padding: 2vw;
+    margin: 2vw;
+    font-size: 3vw;
+  }
+  
+  label {
+    font-size: 1.25rem;
+    margin: 2vw;
+  }
+  input {
+    margin: 1vw 0;
+    width: 96%;
+    padding: 1.75vw;
+    font-size: 1.25vw;
+  }
+  button {
+    border-radius: 0;
+    border-width: .25vw;
+    border-style: double;
+    background-color: #0794d1;
+    color: white;
+    padding: .75vw 4vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+  button[disabled] {
+    background-color: #f9e39f;
+    color: gray;
+    text-decoration: line-through;
+  }
+  form {
+    padding: 1rem 0 1.5rem;
+    position: relative;
+  }
+  form button {
+    position: absolute;
+    right: 0;
+  }
