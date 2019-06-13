@@ -13,10 +13,10 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 require("./routes/api-routes")(app);
-
 //Connect to mongo db
 const mongoose = require("mongoose");
-const mongoURL = process.env.MONGODB_URI || "mongodb://localhost/google-book-search";
+const mongoURL = process.env.MONGODB_URI || "mongodb://user1:Password123@ds237267.mlab.com:37267/heroku_n56w7j3c";
+// const mongoURL = process.env.MONGODB_URI || "mongodb://localhost/google-book-search";
 mongoose.connect(mongoURL , {useNewUrlParser:true})
 .then(() => {
   console.log("Successfully connected to Mongo DB");
