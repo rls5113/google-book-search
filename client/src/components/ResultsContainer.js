@@ -29,29 +29,28 @@ function ResultsContainer(props) {
                     {
                         props.savedBooks.map(
                             (book) => {
-                                return <BookResult                          title={book.title}
+                                return <BookResult                     title={book.title}
                                     authors={book.authors}
                                     description={book.description}
-                                    link={book.canonicalVolumeLink}
-                                    img={book.imageLinks}
+                                    link={book.link}
+                                    img={book.img}
+                                    id={book._id}
                                     path={props.path}
-                                    key={book.id}/>
+                                    key={book._id}/>
                             }
                         )
                     }
                 </div>
-
+            );
+        } else {
+            return(
+                <div id="resultsContainer">
+                    <h3>Saved Books</h3>
+                    <p>No saved books</p> 
+                </div>
             );
         }
-
-    } else {
-        return(
-            <div id="resultsContainer">
-                <h3>Saved Books</h3>
-                <p>No saved books</p> 
-            </div>
-        );
-    }
+    } 
 }
 
 export default ResultsContainer;

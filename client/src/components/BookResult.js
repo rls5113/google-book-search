@@ -62,7 +62,13 @@ class BookResult extends React.Component {
                             (this.props.link)? <a href={this.props.link} target="_blank" rel="noopener noreferrer"><button type="button" name="view">View</button></a> : null
                         }
                         {
-                            (this.props.path === "/")? <button type="button" name="save" onClick={this.handleSaveClick} disabled={this.state.saved}>{(this.state.saved)? "Saved" : "Save"}</button> : <button type="button" name="Delete" onClick={this.handleDeleteClick} disabled={this.state.deleted}>Delete</button>
+                            (this.props.path === "/") 
+                            ? 
+                            <button type="button" name="save" onClick={this.handleSaveClick} disabled={this.state.saved}>
+                            {(this.state.saved)? "Saved" : "Save"}
+                            </button> 
+                            : 
+                            <button type="button" name="Delete" onClick={this.handleDeleteClick} disabled={this.state.deleted}>Delete</button>
                         }
                     </div>
                 </div>
