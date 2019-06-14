@@ -40,13 +40,13 @@ class Search extends React.Component {
     }
     render(){
         return (
-            <main>
+            <div>
                 <SearchForm handleChange={this.handleChange} handleSearchClick={this.handleSearchClick} />
                 {
                     (this.state.bookData.length > 0) ? 
                         <ResultsContainer bookData={this.state.bookData} path={this.props.match.path}/>  : null
                 }
-            </main>
+            </div>
         ) ;
     }
 }
