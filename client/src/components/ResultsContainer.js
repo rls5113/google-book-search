@@ -14,13 +14,36 @@ function ResultsContainer(props) {
                         authors={bookInfo.authors}
                         description={bookInfo.description}
                         link={bookInfo.canonicalVolumeLink}
-                        // img={bookInfo.imageLinks.thumbnail}
+                        img={bookInfo.imageLinks}
                         path={props.path}
                         key={book.id}
                         />
                 })}
             </div>
         );
+    } else if(props.path === "/saved") {
+        if(props.savedBooks.length > 0) {
+            return(
+                <div id="resultsContainer">
+                    <h3>Saved Books</h3>
+                    {
+                        props.savedBooks.map(
+                            (book) => {
+                                return <BookResult                          title={book.title}
+                                    authors={book.authors}
+                                    description={book.description}
+                                    link={book.canonicalVolumeLink}
+                                    img={book.imageLinks}
+                                    path={props.path}
+                                    key={book.id}/>
+                            }
+                        )
+                    }
+                </div>
+
+            );
+        }
+
     } else {
         return(
             <div id="resultsContainer">

@@ -5,7 +5,7 @@ const path = require("path");
 // const router = require("express").Router();
 
 module.exports = function(app) {
-
+    //SEARCH
     app.post("/search", (req, res) => {
         console.log("in api-routes");
         //replace spaces with (+) in the title
@@ -27,7 +27,29 @@ module.exports = function(app) {
             }
         )
     });
-
+    //SAVE BOOK
+    app.post("/api/books", (req, res) => {
+        db.Book.create(req.body).then(
+            (response) => {
+                res.json({successful: response});
+            }
+        ).catch(
+            (err) => {
+                res.json({error: err});
+            }
+        );
+    });
+    //GET SAVED BOOKS
+    app.get("/api/books", (req, res) => {
+        db.Book.find()
+        .then((bookData) => {
+            res.json(bookData);
+        })
+        .catch((err) => {
+            res.json({error: err});
+        });
+    });
+ 
 
 
 

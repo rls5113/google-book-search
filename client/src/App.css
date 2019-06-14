@@ -57,11 +57,12 @@ nav {
   }
   button {
     border-radius: 0;
-    border-width: .25vw;
+    border-width: .35vw;
     border-style: double;
+    border-color: #f9c411;
     background-color: #0794d1;
     color: white;
-    padding: .75vw 4vw;
+    padding: .25vw 3vw;
     font-size: 1.5vw;
     font-weight: bold;
   }
@@ -78,3 +79,66 @@ nav {
     position: absolute;
     right: 0;
   }
+
+  #resultsContainer {
+    font-size: 1rem;
+  }
+  
+  #resultsContainer h3 {
+    margin-bottom: 3.5vw;
+  }
+  
+  .bookResult {
+    background-color: #d1dfee;
+    color: black;
+    padding: 1.75vw;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+  .bookResult img {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 300px;
+    max-height: auto;
+    margin-right: 2vw;
+    border-width: .35vw;
+    border-style: double;
+    border-color: #f9c411;
+    /* background-color: #0794d1; */
+    padding: .1vw;
+
+  }
+  .bookResult:not(:last-of-type) {
+    margin-bottom: 2vw;
+  }
+  
+  .bookResult h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1vw;
+  }
+  
+  .bookResult .row:first-of-type {
+    margin-bottom: 2vw;
+  }
+
+  .aboutBook {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 65%;
+  padding: 0;
+}
+.btnDiv {
+  box-sizing: border-box;
+  float: right;
+}
+
+.btnDiv button:first-of-type {
+  margin-right: 1.75vw;
+}
+
+@media screen and (min-width: 480px) {
+  .bookResult .row:nth-of-type(2) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
