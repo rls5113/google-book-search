@@ -50,9 +50,18 @@ module.exports = function(app) {
         });
     });
  
-
-
-
+    //DELETE BOOK
+    app.delete("/api/books/:id", (req, res) => {
+        db.Book.findByIdAndDelete(req.params.id).then(
+            (response) => {
+                res.json({successful: response});
+            }
+        ).catch(
+            (err) => {
+                res.json({error: err});
+            }
+        );
+    });    
 
     // Send every other request to the React app
     // Define any API routes before this runs
